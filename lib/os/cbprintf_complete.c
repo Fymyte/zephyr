@@ -1592,6 +1592,8 @@ int z_cbvprintf_impl(cbprintf_cb out, void *ctx, const char *fp,
 
 			if (precision >= 0) {
 				len = strnlen(bps, precision);
+			} if (width >= 0) {
+				len = strnlen(bps, width);
 			} else {
 				len = strlen(bps);
 			}
